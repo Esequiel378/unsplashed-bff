@@ -16,6 +16,12 @@ UNSPLASH_ACCESS_KEY=your-access-key
 
 ### Usage
 
+Install go modules
+
+```bash
+go mod download
+```
+
 run the project with
 
 ```bash
