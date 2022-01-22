@@ -1,7 +1,20 @@
 package unsplash
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/esequiel378/unsplashed-bff/services/unsplash/api"
+	"github.com/gofiber/fiber/v2"
+)
 
-func greeting(c *fiber.Ctx) error {
-	return c.SendString("Hello world")
+func photos(c *fiber.Ctx) error {
+	queryString := c.Request().URI().QueryString()
+	params := "?" + string(queryString)
+
+	photos, err := api.PhotosList(params)
+
+	if err != nil {
+		c.Status(fiber.StatusBadRequest).SendString(err.Error())
+		return err
+	}
+
+	return c.Status(fiber.StatusOK).JSON(photos)
 }
