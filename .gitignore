@@ -4,7 +4,7 @@
 *.old
 *.swp
 *.test
-.envrc
+.env
 .gotools
 .vagrant/
 /pkg

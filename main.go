@@ -5,9 +5,12 @@ import (
 
 	"github.com/esequiel378/unsplashed-bff/services"
 	"github.com/gofiber/fiber/v2"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+	godotenv.Load()
+
 	app := fiber.New()
 
 	servicesRoutes := services.GetRoutes()
