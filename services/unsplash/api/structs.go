@@ -72,3 +72,9 @@ type Photo struct {
 		} `json:"sponsor"`
 	} `json:"sponsorship"`
 }
+
+type PaginatedPhoto struct {
+    Total int `json:"total"`
+    TotalPages int `json:"total_pages"`
+    Results []Photo `json:"results"`
+}
