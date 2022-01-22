@@ -18,3 +18,17 @@ func photos(c *fiber.Ctx) error {
 
 	return c.Status(fiber.StatusOK).JSON(photos)
 }
+
+func searchPhotos(c *fiber.Ctx) error {
+	queryString := c.Request().URI().QueryString()
+	params := "?" + string(queryString)
+
+	photos, err := api.PhotosSearch(params)
+
+	if err != nil {
+		c.Status(fiber.StatusBadRequest).SendString(err.Error())
+		return err
+	}
+
+	return c.Status(fiber.StatusOK).JSON(photos)
+}
