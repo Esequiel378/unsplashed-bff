@@ -2,22 +2,14 @@
 
 ### Config
 
-In order to run the project, you will need set a few env variables inside of
+In order to run the project, you will need set an env variable inside of
 a ```.env``` file on the root directory
 
-```python
+```js
 UNSPLASH_ACCESS_KEY=your-access-key
-# Coma separated urls (* means all)
-ALLOW_ORIGINS="*"
 ```
 
 ### Usage
-
-Install go modules
-
-```bash
-go mod download
-```
 
 run the project with
 
