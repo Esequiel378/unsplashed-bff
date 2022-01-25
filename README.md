@@ -2,11 +2,13 @@
 
 ### Config
 
-In order to run the project, you will need set an env variable inside of
+In order to run the project, you will need set a few env variables inside of
 a ```.env``` file on the root directory
 
-```js
+```python
 UNSPLASH_ACCESS_KEY=your-access-key
+# Coma separated urls (* means all)
+ALLOW_ORIGINS="*"
 ```
 
 ### Usage
