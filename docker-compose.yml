@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - UNSPLASH_ACCESS_KEY=${UNSPLASH_ACCESS_KEY}
+      - ALLOW_ORIGINS=${ALLOW_ORIGINS}
     ports:
       - "80:80"
     restart: on-failure

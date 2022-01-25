@@ -16,7 +16,6 @@ FROM alpine
 
 WORKDIR /
 
-COPY .env ./
 COPY --from=builder /app/unsplashed /unsplashed
 
 EXPOSE 80
