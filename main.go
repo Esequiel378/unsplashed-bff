@@ -3,11 +3,9 @@ package main
 import (
 	"log"
 	"os"
-	"time"
 
 	"github.com/esequiel378/unsplashed-bff/services"
 	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/cache"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
 )
@@ -25,14 +23,6 @@ func main() {
 			AllowOrigins: origins,
 		}))
 	}
-
-	app.Use(cache.New(cache.Config{
-		Next: func(c *fiber.Ctx) bool {
-			return c.Query("refresh") == "true"
-		},
-		Expiration:   30 * time.Minute,
-		CacheControl: true,
-	}))
 
 	servicesRoutes := services.GetRoutes()
 
