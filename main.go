@@ -25,5 +25,5 @@ func main() {
 
 	app.Mount("/api", servicesRoutes)
 
-	log.Fatal(app.Listen(":4000"))
+	log.Fatal(app.Listen(":80"))
 }
