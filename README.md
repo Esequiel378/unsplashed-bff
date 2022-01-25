@@ -34,7 +34,7 @@ docker-compose up
 then you can visit
 
 ```python
-http://localhost:4000/api/unsplash/photos
-http://localhost:4000/api/unsplash/search/photos?query=london
+http://localhost/api/unsplash/photos
+http://localhost/api/unsplash/search/photos?query=london
 ```
 
