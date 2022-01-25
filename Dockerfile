@@ -14,8 +14,6 @@ RUN go build -o unsplashed
 
 FROM alpine
 
-RUN apk --no-cache add ca-certificates
-
 WORKDIR /
 
 COPY .env ./
