@@ -1,0 +1,14 @@
+spec:
+  name: unsplashed-dockerfile
+  services:
+  - dockerfile_path: Dockerfile
+    git:
+      branch: main
+      repo_clone_url: https://github.com/Esequiel378/unsplashed-bff
+    envs:
+      - key: UNSPLASH_ACCESS_KEY
+        value: "your-unsplashed-access-key"
+        type: SECRET
+      - key: ALLOW_ORIGINS
+        value: "*"
+    name: unsplashed-dockerfile
