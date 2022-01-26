@@ -8,7 +8,7 @@ import (
 func PhotosSearch(params string) (*PaginatedPhoto, error) {
 	url := BASE_URL + "/search/photos"
 
-	resp, err := prepareRequest(http.MethodGet, url+params)
+	resp, err := makeRequest(http.MethodGet, url+params)
 
 	if err != nil {
 		return nil, err

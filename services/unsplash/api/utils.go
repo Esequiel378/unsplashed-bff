@@ -7,7 +7,7 @@ import (
 
 var BASE_URL = "https://api.unsplash.com"
 
-func prepareRequest(method, url string) (*http.Response, error) {
+func makeRequest(method, url string) (*http.Response, error) {
 	client := http.Client{}
 	req, err := http.NewRequest(method, url, nil)
 
